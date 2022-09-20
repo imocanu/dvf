@@ -1,2 +1,2 @@
 # dvf
-Design verification framework for any hardware IP
+Design Verification Framework for any hardware IP
