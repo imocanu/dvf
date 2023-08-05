@@ -13,7 +13,7 @@ class dvf_monitor #(type DVF_ITEM     = uvm_sequence_item,
   uvm_analysis_port #(DVF_ITEM_REQ) req_analysis_port;
   uvm_analysis_port #(DVF_ITEM_RSP) rsp_analysis_port;
 
-  `uvm_component_new
+  //`uvm_component_new
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
@@ -30,7 +30,7 @@ class dvf_monitor #(type DVF_ITEM     = uvm_sequence_item,
 
   // collect transactions forever
   virtual protected task collect_trans(uvm_phase phase);
-    `uvm_fatal(`gfn, "collect_trans()")
+    `uvm_fatal("[dvf_monitor]", "collect_trans()")
   endtask
 
 endclass

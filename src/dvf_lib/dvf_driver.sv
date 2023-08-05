@@ -7,7 +7,7 @@ class dvf_driver #(type DVF_SEQ_ITEM       = uvm_sequence_item,
                                               .DVF_CONFIG        (DVF_CONFIG),
                                               .DVF_RESPONSE_ITEM (DVF_RESPONSE_ITEM)))
 
-  `uvm_component_new
+  //`uvm_component_new
 
   virtual task run_phase(uvm_phase phase);
     fork
@@ -16,7 +16,7 @@ class dvf_driver #(type DVF_SEQ_ITEM       = uvm_sequence_item,
   endtask
 
   virtual task get_and_drive();
-    `uvm_fatal(`gfn, "get_and_drive()")
+    `uvm_fatal("[dvf_driver]", "get_and_drive()")
   endtask
 
 endclass

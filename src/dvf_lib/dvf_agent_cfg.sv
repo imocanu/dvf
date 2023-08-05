@@ -12,6 +12,10 @@ class dvf_agent_cfg extends uvm_object;
     `uvm_field_int (has_respond_fifo,    UVM_DEFAULT)
   `uvm_object_utils_end
 
-  `uvm_object_new
+  function new(string name = "dvf_agent_cfg");
+    super.new(name);
+  endfunction
+
+  //`uvm_object_new
 
 endclass

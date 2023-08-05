@@ -1,9 +1,11 @@
 class dvf_scoreboard #(type DVF_CONFIG = dvf_env_cfg) extends uvm_component;
-  `uvm_component_param_utils(dv_base_scoreboard #(DVF_CONFIG))
+  `uvm_component_param_utils(dvf_scoreboard #(DVF_CONFIG))
 
   DVF_CONFIG    cfg;
   
-  `uvm_component_new
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction //new()
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
@@ -23,7 +25,7 @@ class dvf_scoreboard #(type DVF_CONFIG = dvf_env_cfg) extends uvm_component;
   virtual task sample_resets();
   endtask
 
-  virtual function void reset(string kind = "HARD");
+  virtual function void reset(string kind = "normal");
   endfunction
 
   virtual function void pre_abort();

@@ -3,6 +3,6 @@ class dvf_virtual_sequencer #(type DVF_CONFIG = dvf_env_cfg) extends uvm_sequenc
 
   DVF_CONFIG     cfg;
 
-  `uvm_component_new
+ // `uvm_component_new
 
 endclass

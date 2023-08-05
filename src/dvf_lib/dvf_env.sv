@@ -10,14 +10,14 @@ class dvf_env #(type DVF_ENV_CFG          = dvf_env_cfg,
   DVF_VIRTUAL_SEQUENCER   virtual_sequencer;
   DVF_SB                  scoreboard;
 
-  `uvm_component_new
+  //`uvm_component_new
 
   virtual function void build_phase(uvm_phase phase);
     string default_ral_name;
     super.build_phase(phase);
     
     if (!uvm_config_db#(DVF_ENV_CFG)::get(this, "", "cfg", cfg)) begin
-      `uvm_fatal(`gfn, $sformatf("failed to get %s from uvm_config_db", cfg.get_type_name()))
+      `uvm_fatal("[dvf_env]", $sformatf("failed to get %s from uvm_config_db", cfg.get_type_name()))
     end
 
   endfunction

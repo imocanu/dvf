@@ -7,7 +7,7 @@ class dvf_seq #(type DVF_SEQ       = uvm_sequence_item,
 
   DVF_CONFIG cfg;
 
-  `uvm_object_new
+  //`uvm_object_new
 
   task pre_start();
     super.pre_start();

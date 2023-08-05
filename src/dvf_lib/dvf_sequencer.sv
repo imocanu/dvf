@@ -12,7 +12,7 @@ class dvf_sequencer #(type DVF_ITEM       = uvm_sequence_item,
 
   DVF_CONFIG cfg;
 
-  `uvm_component_new
+  //`uvm_component_new
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);

@@ -5,7 +5,7 @@ class dvf_test #(type DVF_CONFIG      = dvf_env_cfg,
   DVF_ENVIRONMENT        env;
   DVF_CONFIG             cfg;
 
-  `uvm_component_new
+  //`uvm_component_new
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
@@ -18,4 +18,4 @@ class dvf_test #(type DVF_CONFIG      = dvf_env_cfg,
   virtual task run_phase(uvm_phase phase);
   endtask : run_phase
 
-endclass : dv_base_test
+endclass : dvf_test
